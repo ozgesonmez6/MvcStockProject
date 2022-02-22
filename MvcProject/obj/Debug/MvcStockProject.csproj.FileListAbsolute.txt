@@ -72,7 +72,7 @@ C:\Users\ozges\source\repos\MvcProject\MvcProject\bin\System.Web.WebPages.Razor.
 C:\Users\ozges\source\repos\MvcProject\MvcProject\bin\Newtonsoft.Json.xml
 C:\Users\ozges\source\repos\MvcProject\MvcProject\bin\Antlr3.Runtime.pdb
 C:\Users\ozges\source\repos\MvcProject\MvcProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\ozges\source\repos\MvcProject\MvcProject\obj\Debug\MvcProject.csproj.CoreCompileInputs.cache
+C:\Users\ozges\source\repos\MvcProject\MvcProject\obj\Debug\MvcStockProject.csproj.AssemblyReference.cache
+C:\Users\ozges\source\repos\MvcProject\MvcProject\obj\Debug\MvcStockProject.csproj.CoreCompileInputs.cache
 C:\Users\ozges\source\repos\MvcProject\MvcProject\obj\Debug\MvcProject.dll
 C:\Users\ozges\source\repos\MvcProject\MvcProject\obj\Debug\MvcProject.pdb
-C:\Users\ozges\source\repos\MvcProject\MvcProject\obj\Debug\MvcProject.csproj.CopyComplete
