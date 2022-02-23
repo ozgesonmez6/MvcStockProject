@@ -75,4 +75,4 @@ C:\Users\ozges\source\repos\MvcProject\MvcProject\bin\Microsoft.CodeDom.Provider
 C:\Users\ozges\source\repos\MvcProject\MvcProject\obj\Debug\MvcProject.csproj.CoreCompileInputs.cache
 C:\Users\ozges\source\repos\MvcProject\MvcProject\obj\Debug\MvcProject.dll
 C:\Users\ozges\source\repos\MvcProject\MvcProject\obj\Debug\MvcProject.pdb
-C:\Users\ozges\source\repos\MvcProject\MvcProject\obj\Debug\MvcProject.csproj.CopyComplete
+C:\Users\ozges\source\repos\MvcProject\MvcProject\obj\Debug\MvcProject.csproj.AssemblyReference.cache
