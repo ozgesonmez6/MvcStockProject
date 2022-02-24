@@ -79,3 +79,4 @@ C:\Users\ozges\source\repos\MvcProject\MvcProject\bin\EntityFramework.dll
 C:\Users\ozges\source\repos\MvcProject\MvcProject\bin\EntityFramework.SqlServer.dll
 C:\Users\ozges\source\repos\MvcProject\MvcProject\bin\EntityFramework.xml
 C:\Users\ozges\source\repos\MvcProject\MvcProject\bin\EntityFramework.SqlServer.xml
+C:\Users\ozges\source\repos\MvcProject\MvcProject\obj\Debug\MvcProject.csproj.AssemblyReference.cache
