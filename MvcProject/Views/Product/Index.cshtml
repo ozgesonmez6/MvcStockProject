@@ -13,6 +13,8 @@
         <th>Category</th>
         <th>Price</th>
         <th>Stok</th>
+        <th>Delete</th>
+        <th>Update</th>
     </tr>
 
     <tbody>
@@ -25,9 +27,12 @@
             <td>@product.ProductCategory</td>
             <td>@product.Price</td>
             <td>@product.Stok</td>
+            <td> <a href="/Product/Delete/@product.ProductID" class="btn btn-danger">Delete</a></td>
+            <td> <a href="/Product/Update/@product.ProductID" class="btn btn-success">Update</a></td>
         </tr>
         }
     </tbody>
-
 </table>
+
+<a href="/Product/NewProduct" class="btn btn-primary">Add New Product</a>
 
