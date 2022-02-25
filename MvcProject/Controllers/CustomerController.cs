@@ -16,5 +16,19 @@ namespace MvcProject.Controllers
             var values = db.Customers.ToList();
             return View(values);
         }
+        [HttpGet]
+        public ActionResult NewCustomer()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult NewCustomer(Customers customers)
+        {
+            db.Customers.Add(customers);
+            db.SaveChanges();
+            return View();
+        }
+
     }
 }
