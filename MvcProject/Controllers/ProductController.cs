@@ -19,6 +19,13 @@ namespace MvcProject.Controllers
         [HttpGet]
         public ActionResult NewProduct()
         {
+            List<SelectListItem> values = (from i in db.Categories.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text=i.CategoryName,
+                                               Value=i.CategoryID.ToString()
+                                           }).ToList();
+            ViewBag.value = values;
             return View();
         }
 
