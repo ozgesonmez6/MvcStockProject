@@ -17,5 +17,18 @@ namespace MvcProject.Controllers
             var values = db.Categories.ToList();
             return View(values);
         }
+        [HttpGet]
+        public ActionResult NewCategory()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult NewCategory(Categories categories)
+        {
+            db.Categories.Add(categories);
+            db.SaveChanges();
+            return View();
+        }
     }
 }
