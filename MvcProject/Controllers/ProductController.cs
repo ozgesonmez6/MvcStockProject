@@ -16,5 +16,18 @@ namespace MvcProject.Controllers
             var values = db.Products.ToList();
             return View(values);
         }
+        [HttpGet]
+        public ActionResult NewProduct()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult NewProduct(Products products)
+        {
+            db.Products.Add(products);
+            db.SaveChanges();
+            return View();
+        }
     }
 }
