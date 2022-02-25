@@ -32,9 +32,11 @@ namespace MvcProject.Controllers
         [HttpPost]
         public ActionResult NewProduct(Products products)
         {
+            var category = db.Categories.Where(m => m.CategoryID == products.Categories.CategoryID).FirstOrDefault();
+            products.Categories = category;
             db.Products.Add(products);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model MvcProject.Models.Entity.Categories
+﻿@model MvcProject.Models.Entity.Products
 
 @{
     ViewBag.Title = "NewProduct";
@@ -16,7 +16,7 @@
     </div>
     <div>
         <label>Select Category</label>
-        @Html.DropDownListFor(m => m.CategoryName,(List<SelectListItem>)ViewBag.value, new { @class="form-control" })
+        @Html.DropDownListFor(m => m.Categories.CategoryID,(List<SelectListItem>)ViewBag.value, new { @class="form-control" })
     </div>
     <div>
         <label>Price</label>
