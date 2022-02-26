@@ -30,5 +30,13 @@ namespace MvcProject.Controllers
             return View();
         }
 
+        public ActionResult Delete(int id)
+        {
+            var customer = db.Customers.Find(id);
+            db.Customers.Remove(customer);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }
