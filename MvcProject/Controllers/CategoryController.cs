@@ -30,5 +30,13 @@ namespace MvcProject.Controllers
             db.SaveChanges();
             return View();
         }
+
+        public ActionResult Delete(int id)
+        {
+            var category = db.Categories.Find(id);
+            db.Categories.Remove(category);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
