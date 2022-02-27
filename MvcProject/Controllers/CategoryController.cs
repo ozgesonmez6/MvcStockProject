@@ -38,5 +38,11 @@ namespace MvcProject.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult GetCategory(int id)
+        {
+            var category = db.Categories.Find(id);
+            return View("GetCategory", category);
+        }
     }
 }
