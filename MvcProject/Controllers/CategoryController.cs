@@ -44,5 +44,13 @@ namespace MvcProject.Controllers
             var category = db.Categories.Find(id);
             return View("GetCategory", category);
         }
+
+        public ActionResult Update(Categories categories)
+        {
+            var category = db.Categories.Find(categories.CategoryID);
+            category.CategoryName = categories.CategoryName;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
