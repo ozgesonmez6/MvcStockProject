@@ -38,5 +38,11 @@ namespace MvcProject.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult GetCustomer(int id)
+        {
+            var customer = db.Customers.Find(id);
+            return View("GetCustomer", customer);
+        }
+
     }
 }
