@@ -59,5 +59,21 @@ namespace MvcProject.Controllers
             ViewBag.value = values;
             return View("GetProduct", product);
         }
+
+        public ActionResult Update(Products products)
+        {
+            var product = db.Products.Find(products.ProductID);
+            product.ProductName = products.ProductName;
+            product.Marka = products.Marka;
+            product.Stok = products.Stok;
+            product.Price = products.Price;
+            var category = db.Categories.Where(m => m.CategoryID == products.Categories.CategoryID).FirstOrDefault();
+            product.ProductCategory = category.CategoryID;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+
+        }
+
     }
 }
