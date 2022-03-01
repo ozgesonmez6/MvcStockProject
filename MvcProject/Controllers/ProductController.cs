@@ -46,5 +46,11 @@ namespace MvcProject.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult GetProduct(int id)
+        {
+            var product = db.Products.Find(id);
+            return View("GetProduct", product);
+        }
     }
 }
