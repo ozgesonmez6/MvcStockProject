@@ -50,6 +50,13 @@ namespace MvcProject.Controllers
         public ActionResult GetProduct(int id)
         {
             var product = db.Products.Find(id);
+            List<SelectListItem> values = (from i in db.Categories.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = i.CategoryName,
+                                               Value = i.CategoryID.ToString()
+                                           }).ToList();
+            ViewBag.value = values;
             return View("GetProduct", product);
         }
     }

@@ -18,7 +18,7 @@
     <br />
 
     @Html.LabelFor(m => m.ProductCategory)
-    @Html.TextBoxFor(m => m.ProductCategory, new { @class = "form-control" })
+    @Html.DropDownListFor(m => m.Categories.CategoryID, (List<SelectListItem>)ViewBag.value, new { @class = "form-control" })
 
     <br />
 
