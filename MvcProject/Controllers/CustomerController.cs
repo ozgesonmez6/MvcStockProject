@@ -25,6 +25,10 @@ namespace MvcProject.Controllers
         [HttpPost]
         public ActionResult NewCustomer(Customers customers)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("NewCustomer");
+            }
             db.Customers.Add(customers);
             db.SaveChanges();
             return View();

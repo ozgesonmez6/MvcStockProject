@@ -11,7 +11,8 @@ namespace MvcProject.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Customers
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +22,9 @@ namespace MvcProject.Models.Entity
         }
     
         public int CustomerID { get; set; }
+
+        [Required(ErrorMessage = "Enter Customer Name")]
+        [StringLength(50, ErrorMessage = "Enter Max 50 Character")]
         public string CustomerName { get; set; }
         public string CustomerLastname { get; set; }
     
