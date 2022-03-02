@@ -1,38 +1,46 @@
 ﻿@using MvcProject.Models.Entity
-@model List<Products> 
+@model List<Products>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<table class="table table-bordered">
-    <tr>
-        <th>Product ID</th>
-        <th>Product Name</th>
-        <th>Marka</th>
-        <th>Category</th>
-        <th>Price</th>
-        <th>Stok</th>
-        <th>Delete</th>
-        <th>Update</th>
-    </tr>
+<table id="table" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Marka</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stok</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+    </thead>
 
     <tbody>
         @foreach (var product in Model)
         {
-        <tr>
-            <td>@product.ProductID</td>
-            <td>@product.ProductName</td>
-            <td>@product.Marka</td>
-            <td>@product.Categories.CategoryName</td>
-            <td>@product.Price</td>
-            <td>@product.Stok</td>
-            <td> <a href="/Product/Delete/@product.ProductID" class="btn btn-danger">Delete</a></td>
-            <td> <a href="/Product/GetProduct/@product.ProductID" class="btn btn-success">Update</a></td>
-        </tr>
+            <tr>
+                <td>@product.ProductID</td>
+                <td>@product.ProductName</td>
+                <td>@product.Marka</td>
+                <td>@product.Categories.CategoryName</td>
+                <td>@product.Price</td>
+                <td>@product.Stok</td>
+                <td> <a href="/Product/Delete/@product.ProductID" class="btn btn-danger">Delete</a></td>
+                <td> <a href="/Product/GetProduct/@product.ProductID" class="btn btn-success">Update</a></td>
+            </tr>
         }
     </tbody>
 </table>
 
 <a href="/Product/NewProduct" class="btn btn-primary">Add New Product</a>
 
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<link href="~/Content/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+
+<script>
+    $('#table').dataTable({});
+</script>
