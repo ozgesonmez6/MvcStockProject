@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcProject.Models.Entity;
+using PagedList;
 
 namespace MvcProject.Controllers
 {
@@ -12,9 +13,9 @@ namespace MvcProject.Controllers
         // GET: Category
 
         MvcDbStokEntities db = new MvcDbStokEntities();
-        public ActionResult Index()
+        public ActionResult Index(int page=1)
         {
-            var values = db.Categories.ToList();
+            var values = db.Categories.ToList().ToPagedList(page,4);
             return View(values);
         }
         [HttpGet]
