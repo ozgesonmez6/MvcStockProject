@@ -1,4 +1,4 @@
-﻿
+﻿@model MvcProject.Models.Entity.Sales
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -14,21 +14,21 @@
             <div class="modal-header">
                 <h2 class="modal-title">Sales Screen</h2>
             </div>
-            <form>
+            <form method="post" action="/Sales/NewSales">
                 <div class="modal-body">
                     <label>Ürün Adı</label>
-                    <input type="text" name="product" class="form-control" />
-                    <br />
-                    <label>Marka</label>
-                    <input type="text" name="marka" class="form-control" />
+                    @Html.TextBoxFor(m => m.Product, new { @class = "form-control" })
                     <br />
                     <label>Customer Name Lastname</label>
-                    <input type="text" name="customer" class="form-control" />
+                    @Html.TextBoxFor(m => m.Customer, new { @class = "form-control" })
                     <br />
-                    <label>Customer Phone</label>
-                    <input type="text" name="phone" class="form-control" />
+                    <label>Total</label>
+                    @Html.TextBoxFor(m => m.Total, new { @class = "form-control" })
                     <br />
-                    <button class="btn btn-info">Save</button>
+                    <label>Price</label>
+                    @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+                    <br />
+                    <button class="btn btn-info">Make Sales</button>
                 </div>
             </form>
         </div>
