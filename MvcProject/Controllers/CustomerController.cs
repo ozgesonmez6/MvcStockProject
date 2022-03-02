@@ -11,10 +11,17 @@ namespace MvcProject.Controllers
     {
         // GET: Customer
         MvcDbStokEntities db = new MvcDbStokEntities();
-        public ActionResult Index()
+        public ActionResult Index(string customer)
         {
-            var values = db.Customers.ToList();
-            return View(values);
+            var values = from d in db.Customers select d;
+            if (!string.IsNullOrEmpty(customer))
+            {
+                values = values.Where(m => m.CustomerName.Contains(customer));
+            }
+            return View(values.ToList());
+
+            //var values = db.Customers.ToList();
+            //return View(values);
         }
         [HttpGet]
         public ActionResult NewCustomer()
