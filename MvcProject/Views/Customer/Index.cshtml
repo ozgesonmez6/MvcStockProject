@@ -12,6 +12,7 @@
         <th>Customer Lastname</th>
         <th>Delete</th>
         <th>Update</th>
+        <th>Alert</th>
     </tr>
 
     <tbody>
@@ -23,6 +24,7 @@
             <td>@customer.CustomerLastname</td>
             <td> <a href="/Customer/Delete/@customer.CustomerID" class="btn btn-danger">Delete</a></td>
             <td> <a href="/Customer/GetCustomer/@customer.CustomerID" class="btn btn-success">Update</a></td>
+            <td>@Html.ActionLink("Delete", "Delete", new {id = customer.CustomerID}, new { @class="btn btn-warning" , onclick="return confirm('Emin misiniz?')"})</td>
         </tr>
         }
     </tbody>
